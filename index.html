@@ -1,166 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
+<head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aryan Mishra | Tech Professional</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box;}
-body{
-  font-family:'Poppins',sans-serif;
-  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #a1c4fd, #c2e9fb);
-  background-size: 400% 400%;
-  animation: gradientBG 15s ease infinite;
-  color:#222;
-  line-height:1.6;
-  scroll-behavior:smooth;
-}
-@keyframes gradientBG{
-  0%{background-position:0% 50%;}
-  50%{background-position:100% 50%;}
-  100%{background-position:0% 50%;}
-}
-header{
-  background:#FFD500;
-  color:#000;
-  text-align:center;
-  padding:100px 20px;
-  clip-path:polygon(0 0,100% 0,100% 85%,0 100%);
-}
-header h1{font-size:3em;margin-bottom:15px;animation:fadeInDown 1s;}
-header p{font-size:1.3em;font-weight:500;animation:fadeInUp 1s;}
-@keyframes fadeInDown{0%{opacity:0;transform:translateY(-50px);}100%{opacity:1;transform:translateY(0);}}
-@keyframes fadeInUp{0%{opacity:0;transform:translateY(50px);}100%{opacity:1;transform:translateY(0);}}
 
-section{
-  max-width:1000px;
-  margin:60px auto;
-  padding:40px 25px;
-  background: rgba(255,255,255,0.2); /* frosted glass */
-  backdrop-filter: blur(10px);
-  border-radius:20px;
-  box-shadow:0 15px 30px rgba(0,0,0,0.08);
-  opacity:0;
-  transform:translateY(50px);
-  transition:all 0.8s ease-in-out;
+<title>Aryan Mishra | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins;
 }
-section.show{opacity:1;transform:translateY(0);}
-h2{
-  color:#FF3CAC;
-  font-size:2em;
-  margin-bottom:25px;
-  border-bottom:3px solid #3A0CA3;
-  display:inline-block;
-  padding-bottom:5px;
+
+body{
+background:linear-gradient(135deg,#89f7fe,#66a6ff);
+min-height:100vh;
+color:#222;
+transition:0.4s;
 }
-p{margin-bottom:15px;font-size:1.1em;}
-.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;}
-.skill-card{
-  .skill{
-background-color:#e6f2ff;
-padding:6px 12px;
-margin:5px;
+
+.dark{
+background:#111;
+color:white;
+}
+
+header{
+text-align:center;
+padding:80px 20px;
+}
+
+.profile{
+width:160px;
+height:160px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid white;
+}
+
+.glass{
+max-width:900px;
+margin:40px auto;
+padding:30px;
+border-radius:15px;
+background:rgba(255,255,255,0.2);
+backdrop-filter:blur(10px);
+}
+
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:15px;
+}
+
+.skill{
+background:white;
+padding:10px;
+border-radius:8px;
+text-align:center;
+font-weight:600;
+}
+
+.dark .skill{
+background:#222;
+}
+
+.project{
+background:white;
+padding:15px;
+border-radius:8px;
+margin-top:10px;
+}
+
+.dark .project{
+background:#222;
+}
+
+.btn{
 display:inline-block;
-border-radius:6px;
+padding:10px 20px;
+background:#222;
+color:white;
+text-decoration:none;
+border-radius:20px;
+margin-top:10px;
 }
-  background:linear-gradient(145deg,#FFC6FF,#B5FFF3);
-  padding:25px;
-  border-radius:15px;
-  text-align:center;
-  font-weight:600;
-  font-size:1.1em;
-  transition:all 0.4s;
-  cursor:default;
+
+.toggle{
+position:fixed;
+top:20px;
+right:20px;
+padding:10px 15px;
+background:black;
+color:white;
+border:none;
+border-radius:20px;
+cursor:pointer;
 }
-.skill-card:hover{
-  transform:translateY(-8px) scale(1.05);
-  box-shadow:0 15px 25px rgba(0,0,0,0.15);
-}
-.contact p{margin:12px 0;font-size:1.1em;}
-.contact a{text-decoration:none;color:#6a11cb;font-weight:600;transition:all 0.3s;}
-.contact a:hover{color:#4b0fa0;}
-.contact-btn{
-  display:inline-block;
-  margin:10px 10px 0 0;
-  padding:12px 25px;
-  border-radius:50px;
-  background:#222; /* dark button */
-  color:#FFD500;   /* bright yellow text */
-  font-weight:600;
-  transition:all 0.3s;
-  text-decoration:none;
-}
-.contact-btn:hover{
-  background:#444;
-  transform:translateY(-5px) scale(1.05);
-  box-shadow:0 10px 20px rgba(0,0,0,0.2);
-}
+
 footer{
-  text-align:center;
-  padding:25px 0;
-  background:#3A0CA3;
-  color:#fff;
-  border-radius:15px 15px 0 0;
-  margin-top:50px;
+text-align:center;
+padding:20px;
+margin-top:40px;
 }
-@media(max-width:600px){header h1{font-size:2em;}h2{font-size:1.5em;}}
+
+.counter{
+text-align:center;
+margin-top:10px;
+font-size:14px;
+opacity:0.7;
+}
+
 </style>
+
 </head>
+
 <body>
 
+<button class="toggle" onclick="toggleMode()">🌙</button>
+
 <header>
+
+<img src="profile.jpg" class="profile">
+
 <h1>Aryan Mishra</h1>
-<p>Computer & Tech Professional | Fresher & Freelancer</p>
+
+<h3 id="typing"></h3>
+
+<a href="resume.pdf" class="btn">Download Resume</a>
+
 </header>
 
-<section class="about">
+
+<section class="glass">
+
 <h2>About Me</h2>
-<p>A fresher skilled in MS Word, Excel, PowerPoint, Data Entry, Basic HTML, Typing, Tally, and AI tools.</p>
-<p>Passionate about building a career in Computer & Tech field. Tally Prime with gst as a fresher,  Open to freelancing projects and local jobs like helper, packing, and manufacturing work.</p>
+
+<p>I am a fresher skilled in MS Word, Excel, Data Entry, Typing, Tally Prime with GST and AI tools.</p>
+
 </section>
 
-<section class="skills">
+
+<section class="glass">
+
 <h2>Skills</h2>
+
 <div class="skills">
+
 <div class="skill">MS Word</div>
-<div class="skill">MS Excel (Basic)</div>
+
+<div class="skill">MS Excel</div>
+
 <div class="skill">Data Entry</div>
+
 <div class="skill">Typing</div>
-<div class="skill">Tally Prime with GST – Beginner Level</div>
+
+<div class="skill">Tally Prime with GST</div>
+
 <div class="skill">Basic Accounting</div>
+
 <div class="skill">AI Tools (ChatGPT)</div>
+
+</div>
+
 </section>
 
-<section class="contact">
-<h2>Contact</h2>
-<p><strong>Email:</strong> <a href="mailto:aryanmishra5965@gmail.com">aryanmishra5965@gmail.com</a></p>
-<p><strong>WhatsApp:</strong> <a href="tel:+918800483364">8800483364</a></p>
-<p><strong>Location:</strong> New Delhi 110053, India</p>
-<a href="mailto:aryanmishra5965@gmail.com" class="contact-btn">Send Email</a>
-<a href="tel:+918800483364" class="contact-btn">WhatsApp Me</a>
+
+<section class="glass">
+
+<h2>Projects</h2>
+
+<div class="project">
+
+<strong>Personal Portfolio Website</strong>
+
+<p>Built using HTML and hosted on GitHub Pages.</p>
+
+</div>
+
 </section>
+
+
+<section class="glass">
+
+<h2>Contact</h2>
+
+<p>Email: aryanmishra5965@gmail.com</p>
+
+<p>Phone: 8800483364</p>
+
+<p>Location: New Delhi, India</p>
+
+<a href="mailto:aryanmishra5965@gmail.com" class="btn">Email Me</a>
+
+</section>
+
 
 <footer>
-&copy; 2025 Aryan Mishra. All Rights Reserved.
+
+© 2025 Aryan Mishra
+
+<div class="counter">
+Visitors: <span id="visits">0</span>
+</div>
+
 </footer>
 
+
 <script>
-// Scroll animation
-const sections = document.querySelectorAll('section');
-window.addEventListener('scroll', () => {
-sections.forEach(sec => {
-const top = sec.getBoundingClientRect().top;
-const windowHeight = window.innerHeight;
-if(top < windowHeight - 100){ sec.classList.add('show'); }
-});
-});
+
+function toggleMode(){
+document.body.classList.toggle("dark");
+}
+
+const text="Computer & Tech Professional | Fresher";
+let i=0;
+
+function typing(){
+if(i<text.length){
+document.getElementById("typing").innerHTML+=text.charAt(i);
+i++;
+setTimeout(typing,70);
+}
+}
+
+typing();
+
+
+if(localStorage.visits){
+localStorage.visits=parseInt(localStorage.visits)+1;
+}else{
+localStorage.visits=1;
+}
+
+document.getElementById("visits").innerText=localStorage.visits;
+
 </script>
 
 </body>
 </html>
-
-
-
-
-
