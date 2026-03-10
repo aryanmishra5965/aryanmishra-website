@@ -288,83 +288,76 @@ footer{
 </div>
 </section>
 <!-- Education Section -->
-<h2 class="education-title">Education</h2>
+<div class="education-section">
 
-<div class="education-box">
+  <h2 class="edu-heading">Education</h2>
 
-  <div class="education-card">
+  <div class="edu-card">
     <h3>Class 12th (CBSE)</h3>
-    <p>GSBV Gautampuri, Delhi</p>
-    <div class="education-marks">80%</div>
+    <p>School: GSBV Gautampuri, Delhi</p>
+    <span class="edu-marks">80%</span>
   </div>
 
 </div>
 
 <style>
 
-/* title */
-.education-title{
-  font-size:32px;
+/* main section */
+.education-section{
   margin-top:60px;
-  margin-left:40px;
+  padding-left:60px;
   font-family:Arial, sans-serif;
+}
+
+/* heading inside box */
+.edu-heading{
+  font-size:28px;
+  margin-bottom:20px;
   color:#2c3e50;
-  letter-spacing:1px;
 }
 
-/* container right side */
-.education-box{
-  display:flex;
-  justify-content:flex-end;
-  padding-right:60px;
-  margin-top:25px;
-}
-
-/* card design */
-.education-card{
-  width:320px;
+/* card */
+.edu-card{
+  width:330px;
   padding:28px;
   border-radius:16px;
-  background:linear-gradient(135deg,#6a11cb,#2575fc);
+  background:linear-gradient(135deg,#5f72ff,#9b23ea);
   color:white;
   position:relative;
-  backdrop-filter:blur(10px);
-  box-shadow:0 10px 30px rgba(0,0,0,0.25);
-  transition:all 0.35s ease;
+  box-shadow:0 10px 25px rgba(0,0,0,0.25);
+  transition:0.3s;
 }
 
 /* hover animation */
-.education-card:hover{
-  transform:translateY(-10px) scale(1.03);
+.edu-card:hover{
+  transform:translateY(-8px);
   box-shadow:0 18px 40px rgba(0,0,0,0.35);
 }
 
-/* heading */
-.education-card h3{
+/* text */
+.edu-card h3{
   margin:0;
   font-size:22px;
-  font-weight:600;
 }
 
-/* school text */
-.education-card p{
+.edu-card p{
   margin-top:10px;
-  font-size:14px;
   opacity:0.9;
+  font-size:14px;
 }
 
 /* marks badge */
-.education-marks{
+.edu-marks{
   position:absolute;
-  top:-14px;
-  right:-14px;
-  background:linear-gradient(135deg,#ffcc00,#ff8800);
+  top:-12px;
+  right:-12px;
+  background:#ffd700;
   color:#000;
   padding:10px 16px;
   border-radius:30px;
   font-weight:bold;
   font-size:18px;
-  box-shadow:0 6px 15px rgba(0,0,0,0.3);
+  box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
 
 </style>
@@ -407,6 +400,7 @@ document.getElementById("visits").innerText=localStorage.visits;
 
 </body>
 </html>
+
 
 
 
