@@ -287,42 +287,7 @@ footer{
   <div class="skill">Personal Portfolio Website - HTML & GitHub Pages</div>
 </div>
 </section>
-
-<section>
-<h2>Contact</h2>
-<p>Email: aryanmishra5965@gmail.com</p>
-<p>Phone: 8800483364</p>
-<p>Location: New Delhi, India</p>
-<a href="mailto:aryanmishra5965@gmail.com" class="btn">Email Me</a>
-</section>
-
-<footer>
-© 2026 Aryan Mishra
-<div class="counter">Visitors: <span id="visits">0</span></div>
-</footer>
-
-<script>
-// Typing Animation
-const text="Computer & Tech Professional | Fresher";
-let i=0;
-function typing(){
-  if(i<text.length){
-    document.getElementById("typing").innerHTML+=text.charAt(i);
-    i++;
-    setTimeout(typing,70);
-  }
-}
-typing();
-
-// Visitor Counter
-if(localStorage.visits){
-  localStorage.visits=parseInt(localStorage.visits)+1;
-}else{
-  localStorage.visits=1;
-}
-document.getElementById("visits").innerText=localStorage.visits;
-</script>
-<!-- Education Section -->
+  <!-- Education Section -->
 <h2 class="education-title">Education</h2>
 
 <div class="education-box">
@@ -398,8 +363,45 @@ document.getElementById("visits").innerText=localStorage.visits;
 
 </style>
 
+<section>
+<h2>Contact</h2>
+<p>Email: aryanmishra5965@gmail.com</p>
+<p>Phone: 8800483364</p>
+<p>Location: New Delhi, India</p>
+<a href="mailto:aryanmishra5965@gmail.com" class="btn">Email Me</a>
+</section>
+
+<footer>
+© 2026 Aryan Mishra
+<div class="counter">Visitors: <span id="visits">0</span></div>
+</footer>
+
+<script>
+// Typing Animation
+const text="Computer & Tech Professional | Fresher";
+let i=0;
+function typing(){
+  if(i<text.length){
+    document.getElementById("typing").innerHTML+=text.charAt(i);
+    i++;
+    setTimeout(typing,70);
+  }
+}
+typing();
+
+// Visitor Counter
+if(localStorage.visits){
+  localStorage.visits=parseInt(localStorage.visits)+1;
+}else{
+  localStorage.visits=1;
+}
+document.getElementById("visits").innerText=localStorage.visits;
+</script>
+
+
 </body>
 </html>
+
 
 
 
