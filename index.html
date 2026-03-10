@@ -323,9 +323,90 @@ if(localStorage.visits){
 }
 document.getElementById("visits").innerText=localStorage.visits;
 </script>
+  <h2>Education</h2>
+<div id="education-container"></div>
+
+<style>
+  #education-container {
+    max-width: 700px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+  }
+  .edu-wrapper {
+    background: #f0f8ff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+  }
+  .edu-wrapper:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  }
+  .edu-name {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  .edu-bar {
+    width: 100%;
+    height: 25px;
+    background-color: #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .edu-level {
+    height: 100%;
+    text-align: right;
+    line-height: 25px;
+    color: white;
+    padding-right: 10px;
+    border-radius: 12px;
+    width: 0;
+    font-weight: bold;
+    transition: width 1.5s ease-in-out;
+    background: linear-gradient(90deg, #ff7f50, #ff4500);
+  }
+</style>
+
+<script>
+  const education = [
+    { name: "12th (CBSE)", level: 80 } // percentage
+  ];
+
+  const eduContainer = document.getElementById('education-container');
+
+  education.forEach(edu => {
+    const wrapper = document.createElement('div');
+    wrapper.classList.add('edu-wrapper');
+
+    const name = document.createElement('div');
+    name.classList.add('edu-name');
+    name.textContent = edu.name;
+
+    const bar = document.createElement('div');
+    bar.classList.add('edu-bar');
+
+    const level = document.createElement('div');
+    level.classList.add('edu-level');
+    level.textContent = edu.level + '%';
+
+    bar.appendChild(level);
+    wrapper.appendChild(name);
+    wrapper.appendChild(bar);
+    eduContainer.appendChild(wrapper);
+
+    // Animate width
+    setTimeout(() => {
+      level.style.width = edu.level + '%';
+    }, 100);
+  });
+</script>
 
 </body>
 </html>
+
 
 
 
