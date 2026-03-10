@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
 <title>Aryan’s Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 <style> 
@@ -115,6 +116,84 @@ footer{
   <div class="skill">Typing</div>
   <div class="skill">Tally Prime with GST</div>
   <div class="skill">HTML with AI Tools </div>
+  <div id="skills-container"></div>
+
+<style>
+  .skill-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+  }
+  .skill {
+    margin-bottom: 15px;
+  }
+  .skill-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  .skill-bar {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 20px;
+  }
+  .skill-level {
+    height: 100%;
+    background-color: #4CAF50;
+    text-align: right;
+    line-height: 20px;
+    color: white;
+    padding-right: 5px;
+    border-radius: 5px;
+    width: 0; /* will animate from JS */
+    transition: width 1s ease-in-out;
+  }
+</style>
+
+<script>
+  const skills = [
+    { name: "Communication Skills", level: 80 },
+    { name: "English Understanding", level: 75 },
+    { name: "Problem Solving", level: 85 }
+  ];
+
+  const container = document.getElementById('skills-container');
+
+  const skillWrapper = document.createElement('div');
+  skillWrapper.classList.add('skill-container');
+  container.appendChild(skillWrapper);
+
+  skills.forEach(skill => {
+    const skillDiv = document.createElement('div');
+    skillDiv.classList.add('skill');
+
+    const skillName = document.createElement('div');
+    skillName.classList.add('skill-name');
+    skillName.textContent = skill.name;
+
+    const skillBar = document.createElement('div');
+    skillBar.classList.add('skill-bar');
+
+    const skillLevel = document.createElement('div');
+    skillLevel.classList.add('skill-level');
+    skillLevel.textContent = skill.level + '%';
+
+    skillBar.appendChild(skillLevel);
+    skillDiv.appendChild(skillName);
+    skillDiv.appendChild(skillBar);
+    skillWrapper.appendChild(skillDiv);
+
+    // Animate width
+    setTimeout(() => {
+      skillLevel.style.width = skill.level + '%';
+    }, 100);
+  });
+</script>
   
   
 </div>
@@ -165,5 +244,6 @@ document.getElementById("visits").innerText=localStorage.visits;
 
 </body>
 </html>
+
 
 
