@@ -3,384 +3,157 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
 <title>Aryan’s Portfolio</title>
-  <body style="background-image: url('background.jpg'); background-size: cover;">
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-<style> 
-*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins;}
-body{
-  background: linear-gradient(135deg, #ff758c, #ff7eb3, #ffb347, #ffcc70);
-  
-  min-height:100vh;
-  color:#222;
-  transition:0.4s;
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Poppins;
 }
+
+body{
+  background: url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color:white;
+}
+
+/* overlay for better text visibility */
+body::before{
+  content:"";
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.6);
+  z-index:-1;
+}
+
 header{
   text-align:center;
-  padding:100px 20px;
+  padding:120px 20px;
 }
+
 header h1{
-  font-size:3rem;
-  font-weight:700;
-  color:white;
-  text-shadow: 2px 2px 10px #00000077;
-  animation: floatText 2s ease-in-out infinite alternate;
+  font-size:3.5rem;
+  color:#00eaff;
+  text-shadow:0 0 20px #00eaff;
 }
-@keyframes floatText{
-  0%{transform: translateY(0);}
-  100%{transform: translateY(-15px);}
-}
+
 #typing{
-  font-size:1.5rem;
-  color:white;
+  font-size:1.3rem;
   margin-top:10px;
-  min-height:30px;
-  font-weight:500;
+  opacity:0.9;
 }
+
+/* sections */
 section{
   max-width:1000px;
   margin:30px auto;
   padding:30px;
-  border-radius:20px;
-  background: rgba(255,255,255,0.2);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-.skills{
-  display:grid;
-  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
-  gap:20px;
-  margin-top:20px;
-}
-.skill{
-  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-  padding:15px;
   border-radius:15px;
-  font-weight:600;
-  text-align:center;
-  color:black;
-  transition: 0.3s;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
 }
+
+/* skills boxes */
+.skills{
+  display:flex;
+  flex-wrap:wrap;
+  gap:15px;
+  margin-top:20px;
+  justify-content:center;
+}
+
+.skill{
+  padding:12px 20px;
+  border-radius:25px;
+  background: rgba(0,234,255,0.1);
+  border:1px solid #00eaff;
+  color:#00eaff;
+  transition:0.3s;
+}
+
 .skill:hover{
-  transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  background:#00eaff;
+  color:black;
+  transform:scale(1.1);
 }
+
+/* buttons */
 .btn{
   display:inline-block;
   padding:12px 25px;
   margin-top:15px;
-  background: #222;
-  color:white;
+  background:#00eaff;
+  color:black;
   text-decoration:none;
   border-radius:25px;
-  font-weight:600;
   transition:0.3s;
 }
+
 .btn:hover{
-  background:#444;
-  transform: scale(1.05);
+  background:white;
 }
+
+/* footer */
 footer{
   text-align:center;
   padding:20px;
   margin-top:40px;
-  color:white;
-  text-shadow: 1px 1px 5px #00000077;
-}
-.counter{
-  font-size:14px;
-  opacity:0.7;
-  margin-top:5px;
+  opacity:0.8;
 }
 </style>
 </head>
+
 <body>
 
 <header>
-<h1>Aryan’s Portfolio</h1>
+<h1>Aryan Mishra</h1>
 <h3 id="typing"></h3>
-<a href="sandbox:/mnt/data/DOC-20260309-WA0001.." download class="btn">Download</a>
 </header>
 
 <section>
 <h2>About Me</h2>
-<p>I am a fresher skilled in MS Word, Excel, Data Entry, Typing, Tally Prime with GST, and AI tools. Exploring modern technologies and building my career step by step.</p>
+<p>I am a fresher skilled in MS Word, Excel, Data Entry, Typing, Tally Prime with GST, and AI tools. I am building my career step by step in the digital world.</p>
 </section>
 
 <section>
 <h2>Skills</h2>
-<div id="skills-container"></div>
-
-<style>
-  #skills-container {
-    max-width: 700px;
-    margin: 20px auto;
-    font-family: Arial, sans-serif;
-  }
-  .skill-wrapper {
-    margin-bottom: 20px;
-    background: #f9f9f9;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-  }
-  .skill-wrapper:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  }
-  .skill-name {
-    font-weight: bold;
-    margin-bottom: 8px;
-    font-size: 16px;
-  }
-  .skill-bar {
-    width: 100%;
-    height: 25px;
-    background-color: #ddd;
-    border-radius: 12px;
-    overflow: hidden;
-  }
-  .skill-level {
-    height: 100%;
-    text-align: right;
-    line-height: 25px;
-    color: white;
-    padding-right: 10px;
-    border-radius: 12px;
-    width: 0;
-    font-weight: bold;
-    transition: width 1.5s ease-in-out;
-  }
-
-  /* Different colors for each skill to make it engaging */
-  .ms-word { background: linear-gradient(90deg, #1E90FF, #00BFFF); }
-  .ms-excel { background: linear-gradient(90deg, #28a745, #2ecc71); }
-  .data-entry { background: linear-gradient(90deg, #FF6347, #FF4500); }
-  .typing { background: linear-gradient(90deg, #8A2BE2, #9932CC); }
-  .tally { background: linear-gradient(90deg, #FFA500, #FF8C00); }
-  .html-ai { background: linear-gradient(90deg, #FF1493, #FF69B4); }
-</style>
-
-<script>
-  const skills = [
-    { name: "MS Word", level: 90, class: "ms-word" },
-    { name: "MS Excel", level: 85, class: "ms-excel" },
-    { name: "Data Entry", level: 95, class: "data-entry" },
-    { name: "Typing", level: 80, class: "typing" },
-    { name: "Tally Prime with GST", level: 75, class: "tally" },
-    { name: "HTML with AI Tools", level: 70, class: "html-ai" }
-  ];
-
-  const container = document.getElementById('skills-container');
-
-  skills.forEach(skill => {
-    const wrapper = document.createElement('div');
-    wrapper.classList.add('skill-wrapper');
-
-    const name = document.createElement('div');
-    name.classList.add('skill-name');
-    name.textContent = skill.name;
-
-    const bar = document.createElement('div');
-    bar.classList.add('skill-bar');
-
-    const level = document.createElement('div');
-    level.classList.add('skill-level', skill.class);
-    level.textContent = skill.level + '%';
-
-    bar.appendChild(level);
-    wrapper.appendChild(name);
-    wrapper.appendChild(bar);
-    container.appendChild(wrapper);
-
-    // Animate width after slight delay
-    setTimeout(() => {
-      level.style.width = skill.level + '%';
-    }, 100);
-  });
-</script>
-<style>
-  .skill-container {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 10px;
-    background: #fff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    font-family: Arial, sans-serif;
-  }
-  .skill {
-    margin-bottom: 15px;
-  }
-  .skill-name {
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  .skill-bar {
-    width: 100%;
-    background-color: #ddd;
-    border-radius: 5px;
-    overflow: hidden;
-    height: 20px;
-  }
-  .skill-level {
-    height: 100%;
-    background-color: #4CAF50;
-    text-align: right;
-    line-height: 20px;
-    color: white;
-    padding-right: 5px;
-    border-radius: 5px;
-    width: 0; /* will animate from JS */
-    transition: width 1s ease-in-out;
-  }
-</style>
-
-<script>
-  const skills = [
-    { name: "Communication Skills", level: 80 },
-    { name: "English Understanding", level: 75 },
-    { name: "Problem Solving", level: 85 }
-  ];
-
-  const container = document.getElementById('skills-container');
-
-  const skillWrapper = document.createElement('div');
-  skillWrapper.classList.add('skill-container');
-  container.appendChild(skillWrapper);
-
-  skills.forEach(skill => {
-    const skillDiv = document.createElement('div');
-    skillDiv.classList.add('skill');
-
-    const skillName = document.createElement('div');
-    skillName.classList.add('skill-name');
-    skillName.textContent = skill.name;
-
-    const skillBar = document.createElement('div');
-    skillBar.classList.add('skill-bar');
-
-    const skillLevel = document.createElement('div');
-    skillLevel.classList.add('skill-level');
-    skillLevel.textContent = skill.level + '%';
-
-    skillBar.appendChild(skillLevel);
-    skillDiv.appendChild(skillName);
-    skillDiv.appendChild(skillBar);
-    skillWrapper.appendChild(skillDiv);
-
-    // Animate width
-    setTimeout(() => {
-      skillLevel.style.width = skill.level + '%';
-    }, 100);
-  });
-</script>
-  
-  
+<div class="skills">
+  <div class="skill">MS Word</div>
+  <div class="skill">MS Excel</div>
+  <div class="skill">Data Entry</div>
+  <div class="skill">Typing</div>
+  <div class="skill">Tally Prime</div>
+  <div class="skill">HTML + AI Tools</div>
 </div>
 </section>
 
 <section>
 <h2>Projects</h2>
 <div class="skills">
-  <div class="skill">Personal Portfolio Website - HTML & GitHub Pages</div>
+  <div class="skill">Portfolio Website</div>
 </div>
 </section>
-<!-- Education Section -->
-<div class="education-section">
-
-  <h2 class="edu-heading">Education</h2>
-
-  <div class="edu-card">
-    <h3>Class 12th (CBSE)</h3>
-    <p>School: GSBV Gautampuri, Delhi</p>
-    <span class="edu-marks">80%</span>
-  </div>
-
-</div>
-
-<style>
-
-/* section */
-.education-section{
-  margin-top:60px;
-  text-align:center;
-  font-family:Arial, sans-serif;
-}
-
-/* heading */
-.edu-heading{
-  font-size:30px;
-  margin-bottom:25px;
-  color:#2c3e50;
-}
-
-/* card */
-.edu-card{
-  width:340px;
-  margin:auto;
-  padding:28px;
-  border-radius:16px;
-  background:linear-gradient(135deg,#667eea,#764ba2);
-  color:white;
-  position:relative;
-  box-shadow:0 10px 25px rgba(0,0,0,0.25);
-  transition:0.35s;
-}
-
-/* hover effect */
-.edu-card:hover{
-  transform:translateY(-8px) scale(1.02);
-  box-shadow:0 18px 40px rgba(0,0,0,0.35);
-}
-
-/* title */
-.edu-card h3{
-  margin:0;
-  font-size:22px;
-}
-
-/* school */
-.edu-card p{
-  margin-top:10px;
-  opacity:0.9;
-}
-
-/* marks badge */
-.edu-marks{
-  position:absolute;
-  top:-14px;
-  right:-14px;
-  background:linear-gradient(135deg,#ffd700,#ff9800);
-  color:#000;
-  padding:10px 16px;
-  border-radius:30px;
-  font-weight:bold;
-  font-size:18px;
-  box-shadow:0 6px 15px rgba(0,0,0,0.3);
-}
-
-</style>
 
 <section>
 <h2>Contact</h2>
 <p>Email: aryanmishra5965@gmail.com</p>
 <p>Phone: 8800483364</p>
-<p>Location: New Delhi, India</p>
 <a href="mailto:aryanmishra5965@gmail.com" class="btn">Email Me</a>
 </section>
 
 <footer>
 © 2026 Aryan Mishra
-<div class="counter">Visitors: <span id="visits">0</span></div>
 </footer>
 
 <script>
-// Typing Animation
-const text="Computer & Tech Professional | Fresher";
+const text="Computer & Tech Learner | Future Professional";
 let i=0;
 function typing(){
   if(i<text.length){
@@ -390,31 +163,7 @@ function typing(){
   }
 }
 typing();
-
-// Visitor Counter
-if(localStorage.visits){
-  localStorage.visits=parseInt(localStorage.visits)+1;
-}else{
-  localStorage.visits=1;
-}
-document.getElementById("visits").innerText=localStorage.visits;
 </script>
-
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
