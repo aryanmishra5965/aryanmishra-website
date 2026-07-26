@@ -3,167 +3,224 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aryan’s Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<title>Aryan Digital Hub | Your One-Stop Digital Solution</title>
 
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Poppins;
-}
+<link rel="stylesheet" href="style.css">
 
-body{
-  background: url('background.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color:white;
-}
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-/* overlay for better text visibility */
-body::before{
-  content:"";
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background: rgba(0,0,0,0.6);
-  z-index:-1;
-}
-
-header{
-  text-align:center;
-  padding:120px 20px;
-}
-
-header h1{
-  font-size:3.5rem;
-  color:#00eaff;
-  text-shadow:0 0 20px #00eaff;
-}
-
-#typing{
-  font-size:1.3rem;
-  margin-top:10px;
-  opacity:0.9;
-}
-
-/* sections */
-section{
-  max-width:1000px;
-  margin:30px auto;
-  padding:30px;
-  border-radius:15px;
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(10px);
-}
-
-/* skills boxes */
-.skills{
-  display:flex;
-  flex-wrap:wrap;
-  gap:15px;
-  margin-top:20px;
-  justify-content:center;
-}
-
-.skill{
-  padding:12px 20px;
-  border-radius:25px;
-  background: rgba(0,234,255,0.1);
-  border:1px solid #00eaff;
-  color:#00eaff;
-  transition:0.3s;
-}
-
-.skill:hover{
-  background:#00eaff;
-  color:black;
-  transform:scale(1.1);
-}
-
-/* buttons */
-.btn{
-  display:inline-block;
-  padding:12px 25px;
-  margin-top:15px;
-  background:#00eaff;
-  color:black;
-  text-decoration:none;
-  border-radius:25px;
-  transition:0.3s;
-}
-
-.btn:hover{
-  background:white;
-}
-
-/* footer */
-footer{
-  text-align:center;
-  padding:20px;
-  margin-top:40px;
-  opacity:0.8;
-}
-</style>
 </head>
 
 <body>
 
+<div class="background"></div>
+
+<!-- Navbar -->
+
 <header>
-<h1>Aryan Mishra</h1>
-<h3 id="typing"></h3>
+<nav>
+
+<div class="logo">
+<span>⚡</span>
+<h2>Aryan Digital Hub</h2>
+</div>
+
+<ul>
+<li>Home</li>
+<li>Services</li>
+<li>Pricing</li>
+<li>Contact</li>
+<li>Login</li>
+</ul>
+
+<button class="glow-btn">
+Get Started
+</button>
+
+</nav>
 </header>
 
-<section>
-<h2>About Me</h2>
-<p>I am a fresher skilled in MS Word, Excel, Data Entry, Typing, Tally Prime with GST, and AI tools. I am building my career step by step in the digital world.</p>
-</section>
 
-<section>
-<h2>Skills</h2>
-<div class="skills">
-  <div class="skill">MS Word</div>
-  <div class="skill">MS Excel</div>
-  <div class="skill">Data Entry</div>
-  <div class="skill">Typing</div>
-  <div class="skill">Tally Prime</div>
-  <div class="skill">HTML + AI Tools</div>
+<!-- Hero Section -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<p class="tag">
+🟢 Fast • Secure • Trusted
+</p>
+
+<h1>
+Your Digital Services
+<br>
+<span>Reimagined.</span>
+</h1>
+
+<p>
+Aryan Digital Hub provides online forms, recharge, money transfer, cash withdrawal, PF services, ticket booking and more — all at one place.
+</p>
+
+
+<div class="buttons">
+
+<button class="primary">
+Start Now
+</button>
+
+<button class="secondary">
+WhatsApp
+</button>
+
 </div>
-</section>
 
-<section>
-<h2>Projects</h2>
-<div class="skills">
-  <div class="skill">Portfolio Website</div>
+
+<div class="stats">
+
+<div>
+<h2>10K+</h2>
+<p>Visitors</p>
 </div>
+
+<div>
+<h2>24/7</h2>
+<p>Support</p>
+</div>
+
+<div>
+<h2>100%</h2>
+<p>Trusted</p>
+</div>
+
+</div>
+
+
+</div>
+
+
+<div class="glass-card">
+
+<div class="circle"></div>
+
+<h2>
+Aryan Digital Hub
+</h2>
+
+<p>
+Your One-Stop Digital Solution
+</p>
+
+
+<div class="service-mini">
+
+<span>💳 Recharge</span>
+<span>💸 Transfer</span>
+<span>📄 Forms</span>
+<span>🏦 Withdrawal</span>
+
+</div>
+
+
+</div>
+
+
 </section>
 
-<section>
-<h2>Contact</h2>
-<p>Email: aryanmishra5965@gmail.com</p>
-<p>Phone: 8800483364</p>
-<a href="mailto:aryanmishra5965@gmail.com" class="btn">Email Me</a>
+
+
+<!-- Services -->
+
+<section class="services">
+
+<h1>
+Our Services
+</h1>
+
+
+<div class="service-grid">
+
+
+<div class="card">
+<h3>📄 Online Forms</h3>
+<p>Fast online application services</p>
+</div>
+
+
+<div class="card">
+<h3>💳 Recharge</h3>
+<p>Mobile and bill payments</p>
+</div>
+
+
+<div class="card">
+<h3>💸 Money Transfer</h3>
+<p>Secure transfer services</p>
+</div>
+
+
+<div class="card">
+<h3>🏦 Cash Withdrawal</h3>
+<p>Quick withdrawal support</p>
+</div>
+
+
+<div class="card">
+<h3>📑 PF Services</h3>
+<p>PF related assistance</p>
+</div>
+
+
+<div class="card">
+<h3>🎫 Ticket Booking</h3>
+<p>Travel booking solutions</p>
+</div>
+
+
+</div>
+
 </section>
+
+
+
+<!-- Visitor Counter -->
+
+<div class="visitor">
+
+👁 Visitors
+
+<h2 id="visitorCount">
+12584
+</h2>
+
+<p>
+Thanks for visiting Aryan Digital Hub ❤️
+</p>
+
+</div>
+
+
+
+<!-- Footer -->
 
 <footer>
-© 2026 Aryan Mishra
+
+<h2>
+Aryan Digital Hub
+</h2>
+
+<p>
+Your One-Stop Digital Solution
+</p>
+
+<p>
+📞 8800483364
+</p>
+
 </footer>
 
-<script>
-const text="Computer & Tech Learner | Future Professional";
-let i=0;
-function typing(){
-  if(i<text.length){
-    document.getElementById("typing").innerHTML+=text.charAt(i);
-    i++;
-    setTimeout(typing,70);
-  }
-}
-typing();
-</script>
+
+<script src="script.js"></script>
 
 </body>
 </html>
